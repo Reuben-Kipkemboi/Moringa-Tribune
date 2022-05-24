@@ -15,8 +15,6 @@ class Editor(models.Model):
     #save function
     def save_editor(self):
         self.save()
-    class Meta:
-        ordering = ['first_name'] #orders by firstname
         
   #Tag model      
 class tags(models.Model):
@@ -33,7 +31,7 @@ class Article(models.Model):
     editor = models.ForeignKey(Editor,on_delete=models.CASCADE)
     tags = models.ManyToManyField(tags)
     pub_date = models.DateTimeField(auto_now_add=True)
-    article_image = models.ImageField(upload_to = 'articles/', null=True,default='news.jpg')
+    article_image = models.ImageField(upload_to = 'articles/', null=True)
     
     @classmethod
     def todays_news(cls):

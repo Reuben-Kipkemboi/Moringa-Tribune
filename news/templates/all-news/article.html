@@ -1,25 +1,24 @@
 {%extends 'all-news/base.html'%}
+{% block content %}
 
- {% block content %}
+<div class="container">
 
- <div class="container">
+  <div class="col-md-4">
+    <img src="{{article.article_image.url}}" class="img-responsive" alt="Image" style="height: 90%; width: 50%;">
+  </div>
 
-   <div class="row shadow">
-     <img src="{{article.article_image.url}}"  class="img-responsive" alt="">
-   </div>
+  <div class="row">
+    <h1 class="text-center">{{article.title}}</h1>
+  </div>
 
-   <div class="row shadow">
-     <h1 class="text-center">{{article.title}}</h1>
-   </div>
+  <div class="row">
+    <p>{{article.post}}</p>
+  </div>
 
-   <div class="row shadow">
-     <p>{{article.post}}</p>
-   </div>
+  <div class="row">
+    <p>Posted {{article.pub_date|timesince}} by {{article.editor.first_name}}</p>
+  </div>
 
-   <div class="row shadow">
-     <p>Posted {{article.pub_date|timesince}} by {{article.editor.first_name}}</p>
-   </div>
+</div>
 
- </div>
-
- {% endblock %}
+{% endblock %}

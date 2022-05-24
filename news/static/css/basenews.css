@@ -21,9 +21,13 @@ body{
 #h2{
   color: #994055;
 }
-#small{
-  color: #994055;
+#small, #right{
+  /* color: #977E6D;
+   */
+  color: #2D2A41;
   font-family: 'Satisfy', cursive;
+  font-size: 2.5vh;
+  font-weight: bold;
 }
 #tribune, #past, #today{
   color: #2D2A41;
