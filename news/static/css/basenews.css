@@ -1,4 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
+/* font-family: 'El Messiri', sans-serif; */
 h1
 {
-  color: brown;
+  color:#2D2A41;
+  font-family: 'Satisfy', cursive;
+}
+body{
+  /* background-color: #363131; */
+  background-color: #F8F8F8;
+}
+#search{
+  background-color: #969390;
+}
+#h2,#p{
+  font-family: 'El Messiri', sans-serif; 
+
+}
+#h2{
+  color: #994055;
+}
+#small{
+  color: #994055;
+  font-family: 'Satisfy', cursive;
 }
