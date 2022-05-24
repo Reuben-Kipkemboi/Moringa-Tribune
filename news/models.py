@@ -10,3 +10,24 @@ class Editor(models.Model):
     
     def __str__(self):
         return self.first_name
+    #save function
+    def save_editor(self):
+        self.save()
+    class Meta:
+        ordering = ['first_name'] #orders by firstname
+        
+  #Tag model      
+class tags(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length =30)
+
+    def __str__(self):
+        return self.name
+    
+class Article(models.Model):
+    id = models.AutoField(primary_key=True)
+    title = models.CharField(max_length =60)
+    post = models.TextField()
+    editor = models.ForeignKey(Editor,on_delete=models.CASCADE)
+    tags = models.ManyToManyField(tags)
+    pub_date = models.DateTimeField(auto_now_add=True)
