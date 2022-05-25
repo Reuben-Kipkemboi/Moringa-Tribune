@@ -32,6 +32,7 @@ class Article(models.Model):
     tags = models.ManyToManyField(tags)
     pub_date = models.DateTimeField(auto_now_add=True)
     article_image = models.ImageField(upload_to = 'articles/', null=True)
+    # pic_image=models.ImageField(upload_to = 'pictures/',default='pictures/user.png')
     
     @classmethod
     def todays_news(cls):
