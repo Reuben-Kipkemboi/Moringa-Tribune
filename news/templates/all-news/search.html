@@ -4,9 +4,9 @@
 
   <div class="row">
     {% if articles%}
-      <h2>Found {{ articles|length }} of searched term {{message}}</h2>
+      <h1>Found {{ articles|length }} of your searched term {{message}}</h1>
     {% else %}
-      <h2> Found 0 articles for the term {{message}}</h2>
+      <h1> Found 0 articles for the term {{message}}</h1>
     {% endif %}
 
   </div>

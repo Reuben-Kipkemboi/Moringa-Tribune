@@ -3,25 +3,22 @@
 {{ block.super}}
 
 <div class="container">
-
+  <h1 class="d-flex justify-content-end" id="h1">{{date|date:"l d-F Y"}}</h1>
+    
   <!-- Looping through news   -->
   {% for news_item in news %}
 
   <div class="row">
+    <div class="col-md-2">
+    </div>
     <!-- displaying News articles -->
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 shadow mb-3">
+    <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8 shadow mb-3 mt-3">
       <h2 class="text-center" id="h2"> {{ news_item.title }} </h2>
       <p class="text-center" id="p"> {{ news_item.post }} </p>
       <span class="mt-2" id="small">Editor: {{ news_item.editor }}</span>
       <span class="float-right" id="right">Date of Publish: {{ news_item.pub_date }}</span>
-      
-      
-      
     </div>
-    
-    <!--Display news Article images  -->
-
-    
+    <div class="col-md-2"></div>
   </div>
 
   {% empty %}

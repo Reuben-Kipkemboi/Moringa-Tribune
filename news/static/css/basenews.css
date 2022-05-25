@@ -7,6 +7,9 @@ h1
   color:#2D2A41;
   font-family: 'Satisfy', cursive;
 }
+#h1{
+  font-size: 3vh;
+}
 body{
   /* background-color: #363131; */
   background-color: #F8F8F8;
