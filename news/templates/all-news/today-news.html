@@ -13,9 +13,9 @@
     </div>
     <!-- displaying News articles -->
     <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8 shadow mb-3 mt-3">
-      <h2 class="text-center" id="h2"> {{ news_item.title }} </h2>
+      <a href=""><h2 class="text-center" id="h2"> {{ news_item.title }} </h2></a>
       <p class="text-center" id="p"> {{ news_item.post }} </p>
-      <span class="mt-2" id="small">Editor: {{ news_item.editor }}</span>
+      <span class="mt-2" id="small"><i class="fa-solid fa-user-large fs-3"></i> Editor: {{ news_item.editor }}</span>
       <span class="float-right" id="right">Date of Publish: {{ news_item.pub_date }}</span>
     </div>
     <div class="col-md-2"></div>
