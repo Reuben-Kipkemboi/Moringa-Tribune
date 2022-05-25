@@ -14,7 +14,7 @@ body{
 #search{
   background-color: #969390;
 }
-#h2,#p{
+#h2,#p,#post{
   font-family: 'El Messiri', sans-serif; 
 
 }
@@ -33,4 +33,12 @@ body{
   color: #2D2A41;
   font-family: 'Satisfy', cursive;
   border-bottom: 2px solid #2D2A41;
+}
+#img{
+    height: 300px;
+    width: 100%;
+}
+#card-article{
+  /* background: #969390; */
+  background-color: #F8F8F8;
 }
