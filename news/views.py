@@ -9,8 +9,6 @@ def news_today(request):
     news = Article.todays_news()
     return render(request, 'all-news/today-news.html', {"date": date,"news":news})
 
-
-
 #past news function
 def past_days_news(request, past_date):
     try:
