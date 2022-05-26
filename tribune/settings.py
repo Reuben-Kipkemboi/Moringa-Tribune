@@ -32,14 +32,15 @@ MODE=config("MODE", default="dev")
 # Application definition
 
 INSTALLED_APPS = [
+    'news',
+    'bootstrap4',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'news',
-    'bootstrap4',
+    
 ]
 
 MIDDLEWARE = [
@@ -100,8 +101,6 @@ else:
    }
 
 db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
-
 DATABASES['default'].update(db_from_env)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
