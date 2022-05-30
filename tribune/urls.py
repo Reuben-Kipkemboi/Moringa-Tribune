@@ -22,9 +22,14 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'',include('news.urls'))
-    
+    url(r'',include('news.urls')),
+    url(r'^accounts/', include('registration.backends.simple.urls')),
+    # url('accounts/', include('django_registration.backends.activation.urls')),
+    # url('accounts/', include('django.contrib.auth.urls')),   
 ]
+
+
+
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 

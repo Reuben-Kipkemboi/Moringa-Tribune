@@ -1,0 +1,3 @@
+Hello {{name}}
+
+Welcome to the tribune.We have all the trending news in the world.Get updated always.
