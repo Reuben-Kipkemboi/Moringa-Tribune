@@ -10,7 +10,13 @@
       <div class="col-md-8">
         <div class="card-body">
           <h1 class="card-title">{{article.title}}</h1>
-          <p class="card-text" id="post">{{article.post}}</p>
+          <div class="row">
+            {% autoescape on %}
+            {{article.post| safe}}
+           {% endautoescape %}
+       
+          </div>
+          <!-- <p class="card-text" id="post">{{article.post}}</p> -->
           <p class="card-text"><small class="text-muted" id="small">Posted {{article.pub_date|timesince}} by {{article.editor.first_name}} {{article.editor.last_name}}</small></p>
         </div>
       </div>

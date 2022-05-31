@@ -18,9 +18,6 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
-# django built-in authentication system.
-# from django.contrib.auth import views
-
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
@@ -28,15 +25,12 @@ urlpatterns = [
     url(r'',include('news.urls')),
     
     #register
-    url(r'accounts/', include('django_registration.backends.one_step.urls')),
-    url(r'accounts/', include('django.contrib.auth.urls')), 
+    url(r'^accounts/', include('django_registration.backends.one_step.urls')),
+    url(r'^accounts/', include('django.contrib.auth.urls')), 
     
-    #logout
-    # url(r'^logout/$', views.logout, {"next_page": '/'}),  
     
-    #logout
-    url('logout/', auth_views.LogoutView,
-        {'next_page': settings.LOGIN_REDIRECT_URL}, name='logout'),
+    #URLconf for the tinymce package.
+    url(r'^tinymce/', include('tinymce.urls')),
 ]
 
 

@@ -196,6 +196,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER ='kipkemboireuben866@gmail.com'
+EMAIL_HOST_PASSWORD ='Moringa@2022'
+
 
 # Application definition
 
@@ -208,6 +214,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap4',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -225,7 +232,7 @@ ROOT_URLCONF = 'tribune.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -295,3 +302,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #this redirects to our homepage
 LOGIN_REDIRECT_URL = 'newsToday'
+REGISTRATION_REDIRECT_URL = 'newsToday'

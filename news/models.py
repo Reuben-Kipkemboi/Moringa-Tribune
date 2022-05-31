@@ -1,6 +1,11 @@
 from django.db import models
 import datetime as dt
 
+from django.contrib.auth.models import User
+#Tinymce
+from tinymce.models import HTMLField
+
+
 # Create your models here.
 #Editor model this will contain data of our editor
 class Editor(models.Model):
@@ -25,10 +30,11 @@ class tags(models.Model):
         return self.name
     
 class Article(models.Model):
-    id = models.AutoField(primary_key=True)
+    # id = models.AutoField(primary_key=True)
     title = models.CharField(max_length =60)
-    post = models.TextField()
-    editor = models.ForeignKey(Editor,on_delete=models.CASCADE)
+    # post = models.TextField()
+    post= HTMLField()
+    editor = models.ForeignKey(User,on_delete=models.CASCADE)
     tags = models.ManyToManyField(tags)
     pub_date = models.DateTimeField(auto_now_add=True)
     article_image = models.ImageField(upload_to = 'articles/', null=True)
