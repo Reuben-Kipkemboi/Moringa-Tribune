@@ -5,6 +5,9 @@ from .models import Article, NewsLetterRecipients
 from .email import send_welcome_email
 from .forms import NewsLetterForm
 
+#login required decorator
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 def news_today(request):
     date = dt.date.today()
@@ -53,6 +56,7 @@ def search_results(request):
         return render(request, 'all-news/search.html',{"message":message})
     
 #Displaying for a single article
+@login_required(login_url='/accounts/login/') # user should login to see 
 def article(request,article_id):
     try:
         article = Article.objects.get(id = article_id)
