@@ -1,13 +1,16 @@
 {%extends 'all-news/base.html'%}
+{% load static %}
 
 {% block content %}
 <div class="container">
     <!-- Looping through news   -->
     {% for news_item in news %}
     <div class="row">
+        <div class="col-md-2"></div>
         <!-- displaying News articles -->
-        <div class="col-md-4">
+        <div class="col-md-8">
             <h2 class="text-center"> {{ news_item.title }} </h2>
+            <p class="text-center">{{news_item.post}}</p>
         </div>
         <!--Display news Article images  -->
     </div>
