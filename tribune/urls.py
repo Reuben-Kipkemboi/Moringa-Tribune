@@ -27,8 +27,8 @@ urlpatterns = [
     #register
     url(r'^accounts/', include('django_registration.backends.one_step.urls')),
     url(r'^accounts/', include('django.contrib.auth.urls')), 
-    
-    
+    url('logout/', auth_views.logout_then_login),
+
     #URLconf for the tinymce package.
     url(r'^tinymce/', include('tinymce.urls')),
 ]

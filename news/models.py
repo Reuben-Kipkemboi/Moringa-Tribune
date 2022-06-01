@@ -8,18 +8,18 @@ from tinymce.models import HTMLField
 
 # Create your models here.
 #Editor model this will contain data of our editor
-class Editor(models.Model):
-    id = models.AutoField(primary_key=True)
-    first_name = models.CharField(max_length =30)
-    last_name = models.CharField(max_length =30)
-    email = models.EmailField()
-    phone_number = models.CharField(max_length = 10,blank =True)
+# class Editor(models.Model):
+#     id = models.AutoField(primary_key=True)
+#     first_name = models.CharField(max_length =30)
+#     last_name = models.CharField(max_length =30)
+#     email = models.EmailField()
+#     phone_number = models.CharField(max_length = 10,blank =True)
     
-    def __str__(self):
-        return self.first_name
-    #save function
-    def save_editor(self):
-        self.save()
+#     def __str__(self):
+#         return self.first_name
+#     #save function
+#     def save_editor(self):
+#         self.save()
         
   #Tag model      
 class tags(models.Model):
