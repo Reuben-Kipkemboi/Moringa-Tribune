@@ -43,3 +43,6 @@
 </div>
 
 {% endblock %}
+{% block scripts %} {{block.super}}
+  <script type="text/javascript" src="{%static 'js/script.js'%}"></script>
+{% endblock %}
