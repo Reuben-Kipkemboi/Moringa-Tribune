@@ -129,7 +129,7 @@ class MerchDescription(generics.ListCreateAPIView):
         try:
             return MoringaMerch.objects.get(pk=pk)
         except MoringaMerch.DoesNotExist:
-            return Http404
+            raise Http404 #from return to raise
 
     def get(self, request, pk, format=None):
         merch = self.get_merch(pk)
@@ -145,6 +145,12 @@ class MerchDescription(generics.ListCreateAPIView):
             return Response(serializers.data)
         else:
             return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
+        
+    #delete the item
+    def delete(self, request, pk, format=None):
+        merch = self.get_merch(pk)
+        merch.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 
