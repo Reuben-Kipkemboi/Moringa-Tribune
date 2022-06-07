@@ -12,7 +12,9 @@ urlpatterns=[
     #new article
     url(r'^new/article$', views.new_article, name='new-article'),
     #ajax urlsConf
-    url(r'^ajax/newsletter/$', views.newsletter, name='newsletter')
+    url(r'^ajax/newsletter/$', views.newsletter, name='newsletter'),
+    url(r'^api/merch/$', views.MerchList.as_view()),
+    url(r'api/merch/merch-id/(?P<pk>[0-9]+)/$',views.MerchDescription.as_view())
 ]
 
 

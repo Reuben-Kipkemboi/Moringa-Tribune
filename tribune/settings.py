@@ -216,6 +216,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'tinymce',
     'rest_framework',
+    'rest_framework.authtoken'
 ]
 
 MIDDLEWARE = [
@@ -305,3 +306,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #this redirects to our homepage
 LOGIN_REDIRECT_URL = 'newsToday'
 REGISTRATION_REDIRECT_URL = 'newsToday'
+
+#Rest framework 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
